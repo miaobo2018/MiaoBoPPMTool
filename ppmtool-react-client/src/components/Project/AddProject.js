@@ -21,7 +21,7 @@ class AddProject extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-  // life cycle hooks
+  //life cycle hooks
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
@@ -41,7 +41,6 @@ class AddProject extends Component {
       start_date: this.state.start_date,
       end_date: this.state.end_date
     };
-
     this.props.createProject(newProject, this.props.history);
   }
 
@@ -50,17 +49,7 @@ class AddProject extends Component {
 
     return (
       <div>
-        {
-          //check name attribute input fields
-          //create constructor
-          //set state
-          //set value on input fields
-          //create onChange function
-          //set onChange on each input field
-          //bind on constructor
-          //check state change in the react extension
-        }
-        <div className="register">
+        <div className="project">
           <div className="container">
             <div className="row">
               <div className="col-md-8 m-auto">
@@ -70,7 +59,7 @@ class AddProject extends Component {
                   <div className="form-group">
                     <input
                       type="text"
-                      className={classnames("form-control form-control-lg ", {
+                      className={classnames("form-control form-control-lg", {
                         "is-invalid": errors.projectName
                       })}
                       placeholder="Project Name"
@@ -84,11 +73,10 @@ class AddProject extends Component {
                       </div>
                     )}
                   </div>
-
                   <div className="form-group">
                     <input
                       type="text"
-                      className={classnames("form-control form-control-lg ", {
+                      className={classnames("form-control form-control-lg", {
                         "is-invalid": errors.projectIdentifier
                       })}
                       placeholder="Unique Project ID"
@@ -102,17 +90,16 @@ class AddProject extends Component {
                       </div>
                     )}
                   </div>
-
                   <div className="form-group">
                     <textarea
-                      className={classnames("form-control form-control-lg ", {
+                      className={classnames("form-control form-control-lg", {
                         "is-invalid": errors.description
                       })}
                       placeholder="Project Description"
                       name="description"
                       value={this.state.description}
                       onChange={this.onChange}
-                    ></textarea>
+                    />
                     {errors.description && (
                       <div className="invalid-feedback">
                         {errors.description}
