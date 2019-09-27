@@ -1,6 +1,7 @@
 package com.example.ppmtool.web;
 
 import com.example.ppmtool.domain.Project;
+import com.example.ppmtool.domain.ProjectTask;
 import com.example.ppmtool.repositories.ProjectRepository;
 import com.example.ppmtool.services.MapValidationErrorService;
 import com.example.ppmtool.services.ProjectService;
